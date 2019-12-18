@@ -10,7 +10,7 @@ namespace SSHClientTurnel
         {
             Console.WriteLine("SSH Client!");
 
-            using (var client = new SshClient("52.231.201.187", "kevinoh", "Kevin!3245678"))
+            using (var client = new SshClient("52.231.201.187", "<SSH username>", "<SSH password>"))
             {
                 try
                 {
