@@ -10,7 +10,7 @@ namespace SSHClientTurnel
         {
             Console.WriteLine("SSH Client!");
 
-            using (var client = new SshClient("<SSH Server Host or IP address>", "<SSH Server Username>", "<SSH Server Password>"))
+            using (var client = new SshClient("52.231.201.187", "kevinoh", "Kevin!3245678"))
             {
                 try
                 {
@@ -26,7 +26,7 @@ namespace SSHClientTurnel
                 // 1234 : SSH server side port(remote port)
                 // 554 : local service port (ex, 80, 3389 ...)
                 // localhost: local service hostname or ipaddress
-                var port = new ForwardedPortRemote(1234, "localhost", 554);
+                var port = new ForwardedPortRemote(1234, "127.0.0.1", 8554);
 
                 client.AddForwardedPort(port);
 
